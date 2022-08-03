@@ -1,4 +1,4 @@
-FROM node:14-alpine
+FROM node:14-alpine3.16
 EXPOSE 3001
 
 WORKDIR /todobackend
