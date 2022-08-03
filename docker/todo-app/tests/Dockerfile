@@ -1,12 +1,10 @@
 FROM mjgargani/puppeteer:trybe1.0
 
-ADD node_modules.tar.gz .
+WORKDIR /todotests
 
-WORKDIR /tests
+ADD node_modules.tar.gz .
 
 COPY . .
 
-RUN npm install
-
 ENTRYPOINT [ "npm" ]
-CMD [ "test" ]
+CMD [ "test" ] 
