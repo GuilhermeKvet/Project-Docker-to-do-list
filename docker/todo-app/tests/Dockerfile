@@ -4,7 +4,9 @@ WORKDIR /todotests
 
 ADD node_modules.tar.gz .
 
-COPY . .
+COPY ./package.json .
+COPY ./jest.config.js .
+COPY ./e2e .
 
 ENTRYPOINT [ "npm" ]
 CMD [ "test" ]
