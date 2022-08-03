@@ -1,12 +1,10 @@
 FROM mjgargani/puppeteer:trybe1.0
 
-WORKDIR /todotests
+WORKDIR /tests
 
 ADD node_modules.tar.gz .
 
-COPY ./package.json .
-COPY ./jest.config.js .
-COPY ./e2e .
+COPY . .
 
 ENTRYPOINT [ "npm" ]
 CMD [ "test" ]
