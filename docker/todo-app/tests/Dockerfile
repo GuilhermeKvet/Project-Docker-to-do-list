@@ -4,8 +4,6 @@ WORKDIR /todotests
 
 ADD node_modules.tar.gz .
 
-RUN npm test
-
 COPY . .
 
 ENTRYPOINT [ "npm" ]
